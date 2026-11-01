@@ -1,27 +1,35 @@
 # Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
+An Angular web application for managing a car dealership. The Italian-language interface includes customer registration and login, a dashboard for cars and products that need reordering, and management screens for suppliers, manufacturers, vehicles, products, appointments, and purchase orders.
 
-## Development server
+## Tech stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Angular 11.2 and TypeScript
+- Angular Material and SCSS
+- RxJS for API requests
+- Jasmine and Karma for unit tests
 
-## Code scaffolding
+## Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js and npm compatible with Angular CLI 11
+- The dealership API running at `http://localhost:8080` for features that load or save data
 
-## Build
+The development API URL is configured in `src/environments/environment.ts`. This repository contains the frontend; it does not include the API server.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Setup and run
 
-## Running unit tests
+```sh
+npm ci
+npm start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Open [http://localhost:4200](http://localhost:4200). The Angular development server reloads the app when source files change.
 
-## Running end-to-end tests
+## Build and tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```sh
+npm run build
+npm test -- --watch=false
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The build output is written to `dist/Frontend`. Unit tests run with Karma and require a compatible browser.
